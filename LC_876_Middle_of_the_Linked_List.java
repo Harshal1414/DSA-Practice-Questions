@@ -8,5 +8,6 @@ public class LC_876_Middle_of_the_Linked_List {
             b_pointer = b_pointer.next.next;
         }
         return a_pointer;
+        
     }
 }
