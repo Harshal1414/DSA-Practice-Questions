@@ -9,13 +9,10 @@ public class LC_203_Remove_Linked_List_Elements {
             if(curr.next.val == val){
                 curr.next = curr.next.next;
             }
-            curr = curr.next;
+            else{
+                curr = curr.next;
+            }
         }
         return dummy.next;
     }
-}
-
-
-else{
-    curr = curr.next;
 }
