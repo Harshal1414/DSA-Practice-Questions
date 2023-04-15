@@ -22,7 +22,7 @@ public class LC_2487_Remove_Nodes_From_Linked_List {
 
         while(!st.isEmpty()){
             curr = new ListNode(st.pop());
-            curr.next = prev;  // reversing a LinkedList
+            curr.next = prev;  
             prev = curr;
         }
         return curr;
