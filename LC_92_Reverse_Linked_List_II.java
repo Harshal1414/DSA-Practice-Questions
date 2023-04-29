@@ -11,15 +11,19 @@ public class LC_92_Reverse_Linked_List_II {
             pre = pre.next;
         }
 
-        ListNode start = pre.next;
-        ListNode then = start.next;
+        ListNode prev = pre.next;
+        ListNode curr = prev.next;
 
         for(int i = 0; i < right - left; i++){
-            start.next = then.next;
-            then.next = pre.next;
-            pre.next = then;
-            then = start.next;
+            ListNode nextNode = curr.next;
+            curr.next = prev;
+
+            // Update
+            prev = curr;
+            curr = nextNode;
         }
+        pre.next.next = curr;
+        pre.next = prev;
 
         return dummy.next;
     }
